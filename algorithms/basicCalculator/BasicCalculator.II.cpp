@@ -74,7 +74,7 @@ int calculate_two_stacks(string& s) {
         num_stack.push(calculate_exp(x, y, op));\
     }
 
-    for(int i = 0; i < s.size(); i++){
+    for(int i = 0; i < s.size()-2; i++){
         char ch = s[i];
         if (isspace(ch)) continue;
         if (isdigit(ch)) {
