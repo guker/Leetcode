@@ -41,12 +41,15 @@ void reverseWords(string &s) {
     reverse(s, 0, s.size()-1);
 
     // reverse the each word
-    for ( int begin=0, i=0; i<=s.size(); i++ ) {
-        if ( isblank(s[i]) || s[i] == '\0') {
+    int begin=0, i=0;
+    for ( ; i<s.size(); i++ ) {
+        if ( s[i]==' ' || s[i] == '\0') {
             reverse(s, begin, i-1);
             begin = i+1;
         }
     }
+    /// reverse the last word
+    reverse(s,begin,s.size()-1);
 }
 
 
